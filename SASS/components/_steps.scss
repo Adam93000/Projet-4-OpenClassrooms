@@ -1,0 +1,39 @@
+.fonct {
+    padding: 30px 20px;
+    background: #fff;
+  
+    h2 {
+      margin: 0 0 20px;
+      font-size: 24px;
+    }
+  }
+  
+  .step {
+    position: relative;
+    padding: 18px 18px 18px 42px;
+    margin-bottom: 14px;
+    border-radius: $radius;
+    background: $bg-light;
+    font-weight: 500;
+  
+    p {
+      margin: 0;
+    }
+  
+  }
+  
+  .number {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: $primary;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+  }
+  

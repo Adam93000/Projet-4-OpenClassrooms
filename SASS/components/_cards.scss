@@ -1,0 +1,61 @@
+.restaurants {
+    background: $bg-light;
+    padding: 30px 20px;
+  
+    h2 {
+      margin: 0 0 20px;
+      font-size: 24px;
+    }
+  }
+  
+  .card {
+    position: relative;
+    display: block; 
+    background: #fff;
+    border-radius: $radius;
+    overflow: hidden;
+    box-shadow: $shadow;
+    margin-bottom: 18px;
+  
+    img {
+      height: 170px;
+      object-fit: cover;
+      background: #ddd; 
+    }
+  }
+  
+  .badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: $tertiary;
+    color: #1b6150;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 3px;
+  }
+  
+  .card-text {
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  
+    h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+  
+    p {
+      margin: 4px 0 0;
+      font-weight: 300;
+    }
+  }
+  
+  .heart {
+    font-size: 22px;
+    line-height: 1;
+  }
+  

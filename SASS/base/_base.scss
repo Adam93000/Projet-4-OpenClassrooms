@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: $text-dark;
+    background: #fff;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  

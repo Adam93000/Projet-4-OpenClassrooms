@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #353535;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.location {
+  background: #eaeaea;
+  padding: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+.location p {
+  margin: 0;
+}
+
+.hero {
+  background: #f6f6f6;
+  text-align: center;
+  padding: 32px 20px;
+}
+.hero h2 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  font-weight: 700;
+}
+.hero p {
+  margin: 0 0 22px;
+  font-weight: 300;
+}
+
+.footer {
+  background: #353535;
+  color: #fff;
+  padding: 24px 20px;
+}
+
+.footer .logo {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin-bottom: 8px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 500;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.fonct {
+  padding: 30px 20px;
+  background: #fff;
+}
+.fonct h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.step {
+  position: relative;
+  padding: 18px 18px 18px 42px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  background: #f6f6f6;
+  font-weight: 500;
+}
+.step p {
+  margin: 0;
+}
+
+.number {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #9356dc;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+}
+
+.restaurants {
+  background: #f6f6f6;
+  padding: 30px 20px;
+}
+.restaurants h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  margin-bottom: 18px;
+}
+.card img {
+  height: 170px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #99e2d0;
+  color: #1b6150;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.card-text {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.card-text h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.card-text p {
+  margin: 4px 0 0;
+  font-weight: 300;
+}
+
+.heart {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
