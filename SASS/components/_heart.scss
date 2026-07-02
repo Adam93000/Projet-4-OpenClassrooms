@@ -1,0 +1,64 @@
+.heart-container {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.heart-checkbox {
+  display: none;
+}
+
+.heart {
+  position: relative;
+  font-size: 22px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  color: inherit;
+  transition: all 0.3s ease;
+
+  // Font Awesome utilise ::before pour afficher l'icône fa-regular fa-heart
+  // Coeur plein
+  &::after {
+    content: "\f004"; // Unicode pour fa-heart
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; // Solid = 900 pour le cœur plein
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient($secondary, $primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+  }
+}
+
+// Animation au clic (checkbox)
+.heart-checkbox:checked+.heart::before {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.heart-checkbox:checked+.heart::after {
+  opacity: 1;
+  transform: scale(1);
+  animation: heart-fill 0.3s ease;
+}
+
+// Animation au survol (desktop)
+@media (hover: hover) {
+  .heart-container:hover .heart::before {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .heart-container:hover .heart::after {
+    opacity: 1;
+    transform: scale(1);
+    animation: heart-fill 0.3s ease;
+  }
+}

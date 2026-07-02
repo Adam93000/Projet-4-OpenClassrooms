@@ -1,0 +1,229 @@
+// Styles pour les pages de menu
+
+.menu-page {
+  background: $bg-light;
+  min-height: 100vh;
+}
+
+.menu-header {
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.menu-title {
+  background: $bg-light;
+  border-radius: 35px 35px 0 0;
+  padding: 32px 20px;
+  margin-top: -50px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  h2 {
+    margin: 0;
+    font-family: "Shrikhand", cursive;
+    font-size: 28px;
+    font-weight: 400;
+  }
+}
+
+// Le style du bouton de retour est défini dans header.scss
+
+.menu-content {
+  padding: 0 20px 40px;
+  max-width: 1055px;
+  margin: 0 auto;
+}
+
+.menu-section {
+  margin-bottom: 40px;
+  animation: fade-in 0.6s ease backwards;
+
+  &:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid $tertiary;
+    width: 40px;
+  }
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: $shadow;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.3s ease;
+  animation: fade-in 0.6s ease backwards;
+  position: relative;
+
+  // Animation d'apparition progressive des plats
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i + 1}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+
+  .menu-item-checkbox {
+    display: none;
+  }
+
+  .menu-item-checkbox:checked~.menu-item-content {
+    width: calc(100% - 70px);
+  }
+
+  .menu-item-checkbox:checked~.menu-item-price {
+    margin-right: 0;
+    width: 70px;
+    background: $tertiary;
+    border-radius: 0 15px 15px 0;
+    margin: -15px -15px -15px 0;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    min-height: 100%;
+
+    span {
+      display: none;
+    }
+
+    .check-icon {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover .menu-item-content {
+      width: calc(100% - 70px);
+    }
+
+    &:hover .menu-item-price {
+      margin-right: 0;
+      width: 70px;
+      background: $tertiary;
+      border-radius: 0 15px 15px 0;
+      margin: -15px -15px -15px 0;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      min-height: 100%;
+
+      span {
+        display: none;
+      }
+
+      .check-icon {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.menu-item-content {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding-right: 10px;
+  transition: width 0.3s ease;
+
+  h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.menu-item-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 15px;
+  color: $text-dark;
+  flex-shrink: 0;
+  width: 60px;
+  transition: all 0.3s ease;
+  margin-right: -60px;
+  padding-right: 25px;
+  padding-bottom: 0;
+
+  span {
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+  }
+
+  .check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    color: $tertiary;
+    font-size: 14px;
+    opacity: 0;
+    transform: rotate(-180deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0;
+  }
+}
+
+.menu-order {
+  background: $bg-light;
+  padding: 40px 20px;
+  text-align: center;
+}

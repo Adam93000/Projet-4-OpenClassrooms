@@ -1,0 +1,178 @@
+// Media queries pour desktop (1024px et plus)
+
+@media screen and (min-width: 1024px) {
+
+  // Header
+  .header {
+    padding: 24px;
+    box-shadow: none;
+
+    .logo {
+      font-size: 32px;
+    }
+  }
+
+  // Hero section 
+  .hero {
+    padding: 50px 80px;
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  // Section location
+  .location {
+    padding: 18px;
+  }
+
+  // Section fonctionnement
+  .fonct {
+    padding: 50px 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      grid-column: 1 / -1;
+    }
+  }
+
+  .step {
+    flex: 1;
+    padding: 24px 24px 24px 70px;
+    margin-bottom: 0;
+
+    .step-icon {
+      font-size: 24px;
+    }
+  }
+
+  // Section restaurants
+  .restaurants {
+    padding: 30px 180px;
+
+    h2 {
+      font-size: 32px;
+      margin: 0 0 30px;
+    }
+
+    .restaurants-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 100px;
+    }
+
+    .card {
+      margin-bottom: 0;
+
+      img {
+        height: 220px;
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    padding: 50px 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding-bottom: 30px;
+
+    .logo {
+      font-size: 24px;
+      margin: 0 0 0 40px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-end;
+    }
+
+    li {
+      margin-bottom: 0;
+    }
+  }
+
+  // Pages de menu
+  .menu-page {
+    background: #fff;
+  }
+
+  .menu-header {
+    img {
+      height: 400px;
+    }
+  }
+
+  .menu-title {
+    max-width: 1056px;
+    margin: -50px auto 0;
+    padding: 50px 211px;
+    justify-content: center;
+    gap: 24px;
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+
+  .menu-content {
+    background: $bg-light;
+    padding: 0 211px 60px;
+    max-width: 1056px;
+    margin: 0 auto;
+  }
+
+  .menu-section {
+    margin-bottom: 60px;
+
+    h3 {
+      font-size: 20px;
+      width: 50px;
+    }
+  }
+
+  .menu-item {
+    padding: 20px;
+    margin-bottom: 18px;
+
+    h4 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+
+    &:hover {
+      .menu-item-price {
+        margin: -20px -20px -20px 0;
+        padding: 20px 25px;
+      }
+    }
+  }
+
+  .menu-item-price {
+    font-size: 16px;
+  }
+
+  .menu-order {
+    background: $bg-light;
+    max-width: 1056px;
+    margin: 0 auto;
+    padding: 60px 211px;
+  }
+}

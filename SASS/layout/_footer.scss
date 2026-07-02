@@ -1,0 +1,40 @@
+.footer {
+    background: #353535;
+    color: #fff;
+    padding: 24px 20px;
+  }
+  
+  .footer .logo {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 8px;
+  }
+  
+  .footer a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    i {
+      font-size: 14px;
+      width: 16px;
+      text-align: center;
+    }
+  }
+  
+  
