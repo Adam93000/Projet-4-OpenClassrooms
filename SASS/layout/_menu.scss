@@ -165,23 +165,26 @@
   overflow: hidden;
   padding-right: 10px;
   transition: width 0.3s ease;
+  display: block;
 
-  h4 {
+  .menu-item-title {
     margin: 0 0 5px;
     font-size: 18px;
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: block;
   }
 
-  p {
+  .menu-item-desc {
     margin: 0;
     font-size: 15px;
     font-weight: 300;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: block;
   }
 }
 

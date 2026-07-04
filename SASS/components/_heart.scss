@@ -2,6 +2,8 @@
   cursor: pointer;
   display: inline-block;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .heart-checkbox {
