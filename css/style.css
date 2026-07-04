@@ -218,13 +218,13 @@ a {
 .menu-item:nth-child(11) {
   animation-delay: 1s;
 }
-.menu-item-checkbox {
+.menu-item .menu-item-checkbox {
   display: none;
 }
-.menu-item-checkbox:checked ~ .menu-item-content {
+.menu-item .menu-item-checkbox:checked ~ .menu-item-content {
   width: calc(100% - 70px);
 }
-.menu-item-checkbox:checked ~ .menu-item-price {
+.menu-item .menu-item-checkbox:checked ~ .menu-item-price {
   margin-right: 0;
   width: 70px;
   background: #99e2d0;
@@ -237,14 +237,13 @@ a {
   align-self: stretch;
   min-height: 100%;
 }
-.menu-item-checkbox:checked ~ .menu-item-price span {
+.menu-item .menu-item-checkbox:checked ~ .menu-item-price span {
   display: none;
 }
-.menu-item-checkbox:checked ~ .menu-item-price .check-icon {
+.menu-item .menu-item-checkbox:checked ~ .menu-item-price .check-icon {
   opacity: 1;
   transform: rotate(0deg);
 }
-
 @media (hover: hover) {
   .menu-item:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -355,6 +354,7 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 .btn::before {
@@ -367,6 +367,7 @@ a {
   background: linear-gradient(rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375));
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: -1;
 }
 .btn:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
@@ -518,17 +519,19 @@ a {
   display: inline-block;
   -webkit-tap-highlight-color: transparent;
 }
+
 .heart-checkbox {
   display: none;
 }
+
 .heart {
   position: relative;
   font-size: 22px;
-  transition: all 0.3s ease;
   display: inline-block;
   width: 22px;
   height: 22px;
   color: inherit;
+  transition: all 0.3s ease;
 }
 .heart::after {
   content: "\f004";
@@ -546,10 +549,12 @@ a {
   transform: scale(0);
   transition: all 0.3s ease;
 }
+
 .heart-checkbox:checked + .heart::before {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .heart-checkbox:checked + .heart::after {
   opacity: 1;
   transform: scale(1);
@@ -567,7 +572,6 @@ a {
     animation: heart-fill 0.3s ease;
   }
 }
-
 @keyframes loader-spin {
   0% {
     transform: rotate(0deg);
